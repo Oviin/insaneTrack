@@ -1,0 +1,11 @@
+.b-card {
+  margin-bottom: 1rem;
+}
+
+.b-dashboard>.col {
+  border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.b-dashboard>.col:last-child {
+  border: 0;
+}
