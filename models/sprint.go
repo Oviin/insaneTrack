@@ -5,8 +5,8 @@ import (
 )
 
 type SprintModel struct {
-	Description string
-	Teams       []*Team
-	StartTime   *time.Time
-	EndTime     *time.Time
+	Description string     `json:"decription"`
+	Teams       []*Team    `json:"teams"`
+	StartTime   *time.Time `json:"start"`
+	EndTime     *time.Time `json:"end"`
 }
