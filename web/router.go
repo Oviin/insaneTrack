@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/gorilla/handlers"
-
 	"log"
 
+	internalHandlers "github.com/FuJT/insaneTrack/web/handlers"
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 )
 
@@ -24,7 +24,7 @@ func New() *WebServer {
 func (webServer *WebServer) InitHandlers() {
 
 	// index
-	// webServer.router.HandleFunc("/", webServer.IndexHandler)
+	webServer.router.HandleFunc("/", internalHandlers.IndexHandler)
 
 	// static content
 	webServer.router.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("./web/static/"))))
