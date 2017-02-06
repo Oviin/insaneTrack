@@ -1,7 +1,7 @@
 package models
 
 type Team struct {
-    Description string
-    Users []*User
-    TeamHours uint // Колличество часов на команду 
+	Description string  `json:"description"`
+	Users       []*User `json:"user"`
+	TeamHours   uint    `json:"teamhours"` // Колличество часов на команду
 }
