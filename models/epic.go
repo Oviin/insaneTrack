@@ -1,6 +1,6 @@
 package models
 
 type Epic struct {
-	ID         uint
-	Decription string
+	ID         uint   `json:"id"`
+	Decription string `json:"decription"`
 }

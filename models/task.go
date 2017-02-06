@@ -5,35 +5,35 @@ import (
 )
 
 type TaskScope struct {
-	Epic       Epic
-	ID         string
-	Decription string
+	Epic       Epic   `json:"epic"`
+	ID         string `json:"id"`
+	Decription string `json:"decription"`
 }
 
 type Task struct {
-	ID uint
+	ID uint `json:"id"`
 
-	Status   Status
-	Priority Priority
+	Status   Status   `json:"id"`
+	Priority Priority `json:"priority"`
 
-	TaskScope *TaskScope
+	TaskScope *TaskScope `json:"taskscope"`
 
-	Header       string
-	Body         string
-	assignedUser *User
+	Header       string `json:"header"`
+	Body         string `json:"body"`
+	AssignedUser *User  `json:"user"`
 
-	trash bool
+	IsTrash bool `json:"istrash"`
 
-	Estimate          *time.Time
-	RemainingEstimate *time.Time
+	Estimate          *time.Time `json:"estimate"`
+	RemainingEstimate *time.Time `json:"remainingestimate"`
 }
 
 type Status struct {
-	ID          uint
-	Description string
+	ID          uint   `json:"id"`
+	Description string `json:"decription"`
 }
 
 type Priority struct {
-	ID          uint
-	Description string
+	ID          uint   `json:"id"`
+	Description string `json:"decription"`
 }
